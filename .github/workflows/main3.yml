@@ -20,9 +20,5 @@ jobs:
     - name: Correr pruebas
       id: correr-pruebas
       run: python -m unittest -v tests/test_album.py
-    - name: Reporte
-      id: cubrimiento
-      run: |
-          coverage run -m unittest tests/test_album.py
-          coverage report -m
+
 
