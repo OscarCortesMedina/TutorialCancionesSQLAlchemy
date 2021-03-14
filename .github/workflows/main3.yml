@@ -33,5 +33,10 @@ jobs:
       env:
         MENSAJE_EXITO: Todas las pruebas fueron exitosas
       run: echo "::set-output name=respuesta::${MENSAJE_EXITO}"
+    - name: Cálculo de cubrimiento
+      id: cubrimiento
+      run: 
+          coverage run -m unittest tests/test_persona.py
+          coverage report -m
 
 
