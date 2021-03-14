@@ -35,7 +35,7 @@ jobs:
       run: echo "::set-output name=respuesta::${MENSAJE_EXITO}"
     - name: Cálculo de cubrimiento
       id: cubrimiento
-      run: 
+      run: |
           coverage run -m unittest discover -s tests -v
           coverage report -m
 
